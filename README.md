@@ -22,7 +22,12 @@ Um sistema interativo desenvolvido em HTML, CSS e JavaScript para gerar recibos 
 - **jsPDF**: Geração de documentos PDF diretamente no navegador.
 
 ## 📂 Estrutura de Pastas
-/gerador-de-recibos ├── index.html # Página principal do sistema. ├── css │ └── styles.css # Arquivo de estilização. ├── js │ └── script.js # Lógica em JavaScript para gerar recibos e PDFs.
+/gerador-de-recibos 
+├── index.html # Página principal do sistema. 
+├── css │ 
+        └── styles.css # Arquivo de estilização. 
+├── js │ 
+       └── script.js # Lógica em JavaScript para gerar recibos e PDFs.
 
 
 ## 📋 Como Usar
