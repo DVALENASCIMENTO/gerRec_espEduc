@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Recibos - Espaço Escolar Educ</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="rainbow-title">Gerador de Recibos Espaço Escolar Educ</h1>
+        
+        <form id="receiptForm">
+            <label for="studentName">Nome do Aluno:</label>
+            <input type="text" id="studentName" name="studentName" required>
+            
+            <label for="courseName">Nome do Curso:</label>
+            <input type="text" id="courseName" name="courseName" required>
+            
+            <label for="amount">Valor (R$):</label>
+            <input type="number" id="amount" name="amount" required>
+            
+            <label for="paymentDate">Data de Pagamento:</label>
+            <input type="date" id="paymentDate" name="paymentDate" required>
+            
+            <button type="submit">Gerar Recibo</button>
+        </form>
+
+        <div id="receiptOutput" class="receipt-output" style="display: none;">
+            <h2>Recibo Gerado</h2>
+            
+            <h3>Dados da Escola</h3>
+            <p><strong>Nome:</strong> Espaço Escolar Educ</p>
+            <p><strong>CNPJ:</strong> 12.345.678/0001-90</p>
+            <p><strong>Endereço:</strong> Rua Exemplo, 123, Cidade, Estado</p>
+            <p><strong>Telefone:</strong> (11) 1234-5678</p>
+
+            <h3>Dados do Cliente</h3>
+            <p><strong>Nome do Aluno:</strong> <span id="outputName"></span></p>
+            <p><strong>Curso:</strong> <span id="outputCourse"></span></p>
+            <p><strong>Valor Pago:</strong> R$ <span id="outputAmount"></span></p>
+            <p><strong>Data de Pagamento:</strong> <span id="outputDate"></span></p>
+
+            <h3>Assinaturas</h3>
+            <div class="signatures">
+                <div>
+                    <p>_________________________________</p>
+                    <p>Assinatura do Emitente</p>
+                </div>
+                <div>
+                    <p>_________________________________</p>
+                    <p>Assinatura do Cliente</p>
+                </div>
+            </div>
+
+            <button id="downloadBtn">Baixar Recibo</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
